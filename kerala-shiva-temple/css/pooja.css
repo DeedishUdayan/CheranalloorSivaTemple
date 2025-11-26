@@ -1,0 +1,180 @@
+/* Puja Services Listing Page Styling */
+
+#puja-services-listing {
+    background-color: #FFFFFF; /* Clean white background */
+    padding: 80px 0;
+}
+
+.puja-header {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #993333; /* Primary accent red color */
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Filtering/Navigation Bar */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #eee; /* Subtle bottom border for the bar */
+    padding-bottom: 10px;
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+    gap: 15px; /* Space between tabs */
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333333; /* Dark grey/black */
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.tab-button:hover {
+    color: #993333; /* Accent color on hover */
+}
+
+.tab-button.active {
+    color: #993333; /* Accent color for active tab */
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position the underline below the text */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background-color: #993333; /* Accent red color for underline */
+}
+
+/* Service Grid Layout */
+.puja-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive 3-column grid */
+    gap: 30px;
+}
+
+.puja-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.puja-image-placeholder {
+    width: 100%;
+    padding-top: 52.59%; /* (284 / 540) * 100% for 540x284 aspect ratio */
+    background-color: #e0e0e0; /* Grey placeholder color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #777;
+    position: relative;
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.puja-image-placeholder::before {
+    content: 'Image Placeholder';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.puja-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.puja-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.puja-price {
+    font-size: 1.1em;
+    color: #993333; /* Accent red for price */
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.puja-price .arrow {
+    font-size: 1.5em; /* Larger arrow */
+    font-weight: bold;
+    color: #993333;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.puja-card:hover .puja-price .arrow {
+    transform: translateX(5px); /* Slight move on hover */
+}
+
+/* Hide cards that don't match filter */
+.puja-card.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .puja-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .puja-header {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .puja-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .filter-tabs {
+        flex-direction: column; /* Stack tabs vertically */
+        align-items: stretch; /* Stretch tabs to full width */
+    }
+    .tab-button {
+        text-align: center;
+        width: 100%;
+    }
+    .tab-button.active::after {
+        bottom: -5px; /* Adjust underline position for stacked tabs */
+    }
+}
+
+@media (max-width: 576px) {
+    .puja-header {
+        font-size: 2.2em;
+    }
+    .filter-tabs {
+        gap: 10px;
+    }
+    .puja-info {
+        padding: 15px;
+    }
+    .puja-name {
+        font-size: 1.1em;
+    }
+    .puja-price {
+        font-size: 1em;
+    }
+}

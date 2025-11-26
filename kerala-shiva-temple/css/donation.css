@@ -1,0 +1,119 @@
+#donation-section {
+    background-color: #FFFFFF; /* Clean white background */
+    padding: 80px 0;
+}
+
+#donation-section .subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#donation-section .title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #db4242; /* Accent red color */
+    margin-bottom: 40px;
+}
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.campaign-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.campaign-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-bottom: 1px solid #eee;
+}
+
+.campaign-info-block {
+    padding: 20px;
+    flex-grow: 1; /* Allow info section to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.campaign-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.campaign-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow description to grow */
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #db4242; /* Accent red/maroon color */
+    width: 0%; /* Initial width, will be set by inline style */
+    border-radius: 5px 0 0 5px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #db4242; /* Primary accent red/maroon color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Pill/oval shape */
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: auto; /* Push button to the bottom */
+}
+
+.donate-button:hover {
+    background-color: #c43939; /* Darker red on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .donation-grid {
+        grid-template-columns: 1fr;
+    }
+}

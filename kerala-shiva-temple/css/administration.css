@@ -1,0 +1,379 @@
+/* Administration Section Styling */
+
+.section.light-bg {
+    background-color: #f8f8f8; /* Light background as per reference */
+    padding: 80px 0;
+}
+
+.section .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align columns to the top */
+    justify-content: space-between; /* Space between columns */
+    gap: 30px; /* Gap between main columns */
+}
+
+.section .col-lg-6 {
+    flex: 1 1 calc(50% - 15px); /* Adjusted for gap (half of 30px) */
+    max-width: calc(50% - 15px);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .section .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px; /* Space between stacked columns */
+    }
+}
+
+/* Image Group Styling (Left Column) */
+.img-group {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Maintain aspect ratio (1:1 for square, adjust as needed) */
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #eee; /* Placeholder background */
+}
+
+.img-group-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-group-inner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area */
+    border-radius: 8px;
+}
+
+.img-group > img:nth-of-type(1) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Assuming the HTML structure has multiple img tags directly under img-group or img-group-inner */
+/* The reference HTML has 3 img tags: one inside img-group-inner, two directly under img-group */
+.img-group > img:nth-of-type(2) {
+    position: absolute;
+    width: 50%; /* Example for a smaller overlapping image */
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-group > img:nth-of-type(3) {
+    position: absolute;
+    width: 40%; /* Example for another smaller overlapping image */
+    height: 40%;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.section-title .subtitle {
+    font-size: 0.9em;
+    color: #993333; /* Primary accent color */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-title .title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #db4242; /* Changed to #db4242 */
+    margin-bottom: 30px;
+}
+
+.blockquote.bg-transparent {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    background-color: transparent; /* Ensure transparent background */
+}
+
+/* Volunteers */
+.col-lg-6.col-md-6 {
+    flex: 1 1 calc(50% - 15px); /* Two cards per row with gap */
+    max-width: calc(50% - 15px);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .col-lg-6.col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px; /* Space between stacked cards */
+    }
+}
+
+.sigma_volunteers.volunteers-5 {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #fff; /* White background for card */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Inner padding for the card */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    min-height: 350px; /* Ensure consistent height for cards */
+}
+
+.sigma_volunteers-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 270px; /* Fixed width for the image container */
+    height: 280px; /* Fixed height for the image container */
+    background-color: #e0e0e0; /* Placeholder background for image */
+    display: flex; /* For centering placeholder text if image is missing */
+    align-items: center;
+    justify-content: center;
+}
+
+.sigma_volunteers-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area */
+    border-radius: 8px;
+}
+
+.sigma_sm {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: transparent; /* Ensure transparent background */
+}
+
+.sigma_volunteers-thumb:hover .sigma_sm {
+    opacity: 1;
+}
+
+.sigma_sm li {
+    list-style: none; /* Remove bullet points from social icons */
+}
+
+.sigma_sm li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 50%;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.sigma_sm li a:hover {
+    background-color: #993333;
+    color: #fff;
+}
+
+.sigma_volunteers-body {
+    text-align: center;
+}
+
+.sigma_volunteers-info p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.sigma_volunteers-info h5 a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.sigma_volunteers-info h5 a:hover {
+    color: #993333;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.light-bg {
+    background-color: #f8f8f8;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title .subtitle {
+    font-size: 1em;
+    color: #db4242;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.section-title .title {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.section-title.text-start {
+    text-align: left;
+}
+
+.section-title.text-center {
+    text-align: center;
+}
+
+.sigma_volunteers {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sigma_volunteers-thumb img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sigma_volunteers-body {
+    padding: 15px;
+}
+
+.sigma_volunteers-info p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.sigma_volunteers-info h5 a {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sigma_volunteers-info h5 a:hover {
+    color: #db4242;
+}
+
+.sigma_sm {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.sigma_volunteers:hover .sigma_sm {
+    opacity: 1;
+    visibility: visible;
+    bottom: 35px;
+}
+
+.sigma_sm li {
+    margin: 0 5px;
+}
+
+.sigma_sm li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.sigma_sm li a:hover {
+    background-color: #db4242;
+    color: #fff;
+}
+
+.me-lg-30 {
+    margin-right: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-lg-6.mb-lg-30 {
+        margin-bottom: 30px;
+    }
+    .section-title.text-start {
+        text-align: center;
+    }
+    .me-lg-30 {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title .title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .sigma_volunteers-thumb img {
+        margin-bottom: 10px;
+    }
+    .sigma_volunteers-body {
+        padding: 10px;
+    }
+    .sigma_volunteers-info h5 a {
+        font-size: 1em;
+    }
+}

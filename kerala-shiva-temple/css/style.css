@@ -1,0 +1,387 @@
+/* Basic Styles */
+:root {
+    --card-gap: 20px; /* Define a custom property for consistent card spacing */
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #e3900b;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.header-logo {
+    float: left;
+    height: 50px; /* Adjust as needed */
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: #77aaff;
+    font-weight: bold;
+}
+
+main {
+    padding: 0; /* Changed from 20px 0 */
+}
+
+.sigma_btn-custom {
+    display: inline-block;
+    background-color: #FFDAB9; /* Light orange */
+    color: #333; /* Darker text for readability */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px; /* Oval shape */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sigma_btn-custom:hover {
+    background-color: #FFA07A; /* Slightly darker orange on hover */
+}
+
+.sigma_btn-custom.white {
+    background-color: #fff;
+    color: #333;
+}
+
+.sigma_btn-custom.white:hover {
+    background-color: #eee;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-slide {
+    display: none;
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.slider-slide .sigma_banner-text {
+    padding: 100px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay to make text readable */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-slide .title {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.slider-slide .blockquote {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.highlight-orange {
+    color: #FFDAB9; /* Light orange color */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.highlight-orange:hover {
+    text-decoration: underline;
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    display: inline-block; /* Required for transform to work on inline elements */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/circles */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Main Offerings Section Styling */
+#main-offerings {
+    background-color: #FFFFFF; /* Clean white background */
+    padding: 80px 0;
+    background-image: url('../images/background/services-bg.jpg'); /* Background image for the section */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background image fixed during scroll */
+    position: relative; /* Needed for overlay */
+}
+
+#main-offerings::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Faint white overlay for readability */
+    z-index: 0;
+}
+
+#main-offerings .container {
+    position: relative; /* Bring content above the overlay */
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.col-left {
+    flex: 0 0 45%; /* Approximately 45% width */
+    max-width: 45%;
+    padding-right: 30px;
+}
+
+.col-right {
+    flex: 0 0 55%; /* Approximately 55% width */
+    max-width: 55%;
+    padding-left: 30px;
+}
+
+.offerings-image-collage {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-offering-item {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.welcome-message {
+    font-size: 1em;
+    color: #333333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-message::before {
+    content: "ॐ";
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #993333; /* Primary accent color for Om symbol */
+}
+
+.main-offerings-title {
+    font-size: 2.8em;
+    color: #db4242; /* Changed to #db4242 */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.offerings-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.offerings-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #993333; /* Primary accent color */
+    color: #fff; /* White checkmark */
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.info-text-block {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.vertical-line {
+    width: 3px;
+    background-color: #993333; /* Primary accent color */
+    margin-right: 20px;
+    height: auto;
+}
+
+.info-text-block p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.learn-more-btn {
+    background-color: transparent;
+    border: 2px solid #993333; /* Primary accent color outline */
+    color: #993333; /* Primary accent color text */
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.learn-more-btn:hover {
+    background-color: #993333; /* Primary accent color fill on hover */
+    color: #fff; /* White text on hover */
+}
+
+.learn-more-btn i {
+    margin-left: 10px;
+}
+
+/* Services Section Styling */
+/* The following CSS for the Services section has been moved to services.css */
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    /* Styles for .services-container, .services-left-column, .services-right-column, .service-card moved to services.css */
+}
+
+@media (max-width: 768px) {
+    /* Styles for .service-card, .services-right-column moved to services.css */
+}
+
+@media (max-width: 576px) {
+    /* Styles for .services-main-title, .services-left-column moved to services.css */
+}

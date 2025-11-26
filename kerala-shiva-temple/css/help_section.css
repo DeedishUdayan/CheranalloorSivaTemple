@@ -1,0 +1,124 @@
+#help-section {
+    background-color: #FFFFFF; /* Clean white background */
+    padding: 80px 0;
+    /* background-image: url('../images/background/help-bg.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    position: relative; /* Needed for potential overlays */
+}
+
+#help-section .subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333; /* Changed to #333 with increased specificity */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#help-section .title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #db4242; /* Changed to #db4242 */
+    margin-bottom: 40px;
+}
+
+.help-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    gap: 50px; /* Space between QR and details */
+    padding: 20px;
+    max-width: 900px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.qr-code-container {
+    flex: 1;
+    min-width: 250px; /* Minimum width for QR container */
+    max-width: 350px; /* Maximum width for QR container */
+    text-align: center;
+}
+
+.qr-code-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.qr-code-image:hover {
+    transform: scale(1.05); /* Zoom in effect on hover */
+}
+
+.contact-details-container {
+    flex: 2;
+    min-width: 300px; /* Minimum width for details container */
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-details-container:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* More pronounced shadow */
+}
+
+.contact-details-container h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #db4242;
+    padding-bottom: 5px;
+    display: inline-block; /* Make border-bottom fit content */
+}
+
+.contact-details-container p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.contact-details-container p strong {
+    color: #333;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #db4242; /* Red accent color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px; /* Add some space above the button */
+}
+
+.email-button:hover {
+    background-color: #c43939; /* Darker red on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .help-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .qr-code-container,
+    .contact-details-container {
+        min-width: unset;
+        width: 100%;
+        max-width: 400px; /* Constrain width on smaller screens */
+    }
+}

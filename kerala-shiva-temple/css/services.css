@@ -1,0 +1,234 @@
+/* Services Section Styling */
+#services-section {
+    min-height: 600px; /* Adjust as needed */
+    padding: 80px 0; 
+    background-image: url('../images/background/services-bg.jpg'); /* Background image for the section */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background image fixed during scroll */
+    position: relative; /* Needed for overlay */
+}
+
+#services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* Faint white overlay for readability (slightly more opaque) */
+    z-index: 0;
+}
+
+.services-container {
+    position: relative; /* Bring content above the overlay */
+    z-index: 1;
+    display: flex; 
+    flex-direction: column; /* Stack header and cards vertically */
+    flex-wrap: wrap; 
+    width: 100%;
+    max-width: 1200px; 
+    margin: auto;
+    justify-content: flex-start; /* Align content to the start */
+    align-items: center; /* Center items horizontally */
+    gap: var(--card-gap); /* Gap between header and card column */
+}
+
+.services-header-labels {
+    width: 100%; /* Take full width */
+    text-align: center; /* Center the text */
+    margin-bottom: 30px; /* Space below the header */
+    padding: 0 20px; /* Some padding */
+}
+
+.services-label {
+    font-size: 0.9em;
+    color: #993333; /* Darker grey or accent color */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.services-main-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #db4242; /* Changed to #db4242 */
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* The services-left-column and its styles are now effectively handled by services-header-labels */
+.services-left-column {
+    display: none; /* Keep hidden as the labels are now separate */
+}
+
+/* Removed services-left-column::after and other related styles */
+
+.services-right-column {
+    flex: 0 0 100%; /* Take full width for cards now */
+    background-color: #f8f8f8; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: stretch; 
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    gap: var(--card-gap); 
+    box-sizing: border-box; 
+}
+
+.services-right-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/services/background_texture.jpg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; 
+    z-index: 0;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 0 0 calc((100% - (2 * var(--card-gap))) / 3); 
+    margin: 0; 
+    min-height: 280px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box; 
+}
+
+.service-card .card-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.service-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card-learn-more {
+    color: #993333; 
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card-learn-more:hover {
+    text-decoration: underline;
+}
+
+.card-learn-more i {
+    margin-left: 5px;
+}
+
+/* Specific Card Styles */
+.card-about-temple {
+    background-color: #8B4545; 
+    color: #fff;
+}
+
+.card-about-temple h3,
+.card-about-temple p,
+.card-about-temple .card-learn-more {
+    color: #fff;
+}
+
+.card-temple-timing {
+    background-color: #D22B2B; 
+    color: #fff;
+}
+
+.card-temple-timing h3,
+.card-temple-timing p,
+.card-temple-timing .card-learn-more {
+    color: #fff;
+}
+
+.card-events-festivals {
+    background-color: #FFFFFF; 
+}
+
+.card-events-festivals h3,
+.card-events-festivals .card-learn-more {
+    color: #db4242; /* Retain #db4242 for h3 and learn-more */
+}
+
+.card-events-festivals p {
+    color: #333333; /* Changed to black for readability */
+}
+
+.highlight-timing {
+    background-color: #D22B2B; 
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .services-container {
+        flex-direction: column;
+    }
+
+    .services-left-column,
+    .services-right-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .services-left-column::after {
+        display: none; 
+    }
+
+    .service-card {
+        width: calc(50% - 30px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%; 
+        margin: 15px 0;
+    }
+
+    .services-right-column {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-main-title {
+        font-size: 2.2em;
+    }
+
+    .services-left-column {
+        padding: 30px 15px;
+    }
+}

@@ -1,0 +1,134 @@
+#video-section {
+    width: 100%;
+    overflow: hidden; /* Ensure no overflow from pulsing animation */
+    padding: 80px 0; /* Add padding for spacing */
+}
+
+.video-map-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 0 auto; /* Center the wrapper */
+    max-width: 1200px; /* Max width for the entire section */
+}
+
+.map-container,
+.video-container {
+    flex: 1 1 calc(50% - 15px); /* Take 50% width minus half the gap */
+    min-width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px; /* Ensure map iframe fills its container */
+    display: block;
+}
+
+.video-background {
+    width: 100%;
+    height: 450px; /* Adjusted height to match map */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background-color: #7E4555; /* Reddish-brown/maroon */
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 0 rgba(126, 69, 85, 0.7); /* Initial shadow for pulse effect */
+    animation: pulse 2s infinite;
+}
+
+.play-button::before,
+.play-button::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.play-button::before {
+    width: 100%;
+    height: 100%;
+    animation: pulseInOut 2s infinite;
+}
+
+.play-button::after {
+    width: 100%;
+    height: 100%;
+    animation: pulseInOutSM 2s infinite;
+    animation-delay: 0.5s; /* Slightly delayed pulse */
+}
+
+.play-icon {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid #fff;
+    margin-left: 5px; /* Adjust to visually center the triangle */
+}
+
+/* Keyframe Animations */
+@keyframes pulseInOut {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes pulseInOutSM {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-map-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container,
+    .video-container {
+        flex: 1 1 100%; /* Full width on small screens */
+        min-width: unset;
+    }
+}
