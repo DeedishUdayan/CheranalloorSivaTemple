@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/donation.css"> <!-- New stylesheet for Donation section -->
     <link rel="stylesheet" href="css/video_section.css"> <!-- New stylesheet for Video section -->
     <link rel="stylesheet" href="css/footer.css"> <!-- New stylesheet for Footer section -->
+    <link rel="stylesheet" href="css/mobile_nav.css"> <!-- New stylesheet for mobile navigation -->
     
 </head>
 <body>
@@ -21,7 +22,7 @@
         <div class="container">
             <img src="images/logo.png" alt="Cheranalloor Sree Mahadeva Temple Logo" class="header-logo">
             <h1>ॐ  Cheranalloor Sree Mahadeva Temple  ॐ</h1>
-            <nav>
+            <nav class="main-nav-wrapper">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -32,6 +33,30 @@
             </nav>
         </div>
     </header>
+    <div class="top-buttons-mobile">
+        <button class="mobile-button" onclick="window.location.href='booking.html'">ONLINE BOOKING</button>
+        <button class="mobile-button" onclick="window.location.href='donation.html'">DONATION</button>
+    </div>
+    <div class="mobile-nav-bar">
+        <span class="menu-label">MENU</span>
+        <div class="hamburger-icon" id="mobile-menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="close-button">&times;</div>
+        <nav class="main-nav-wrapper-mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="pooja.html">Pooja</a></li>
+                <li><a href="donation.html">Donation</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <section id="home">

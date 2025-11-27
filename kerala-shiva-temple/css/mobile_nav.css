@@ -1,0 +1,125 @@
+/* Top Buttons for Mobile */
+.top-buttons-mobile {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #333; /* Dark background */
+}
+
+.mobile-button {
+    background-color: #333; /* Black background */
+    color: gold; /* Gold text */
+    border: 1px solid gold; /* Gold border */
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    flex: 1; /* Distribute space evenly */
+    margin: 0 5px; /* Small margin between buttons */
+    text-align: center;
+    max-width: 48%; /* Adjust for spacing */
+}
+
+.mobile-button:hover {
+    background-color: gold;
+    color: #333;
+}
+
+/* Mobile Navigation Bar */
+.mobile-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Dark, solid background */
+    color: #fff;
+    height: 60px; /* Substantial height for touch interaction */
+    padding: 0 15px;
+}
+
+.menu-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.hamburger-icon {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 4px; /* Increased gap between bars */
+    width: 35px;
+    height: 30px; /* Increased height */
+}
+
+.hamburger-icon .bar {
+    width: 100%;
+    height: 4px; /* Increased bar height */
+    background-color: #fff; /* White bars */
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent dark overlay */
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-overlay .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-nav-wrapper-mobile ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.main-nav-wrapper-mobile ul li {
+    margin: 20px 0;
+}
+
+.main-nav-wrapper-mobile ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav-wrapper-mobile ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hide desktop navigation on small screens */
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* Hide desktop nav */
+    }
+}
+
+/* Show mobile navigation on small screens */
+@media (min-width: 769px) {
+    .top-buttons-mobile,
+    .mobile-nav-bar,
+    .mobile-menu-overlay {
+        display: none; /* Hide mobile elements on desktop */
+    }
+}
