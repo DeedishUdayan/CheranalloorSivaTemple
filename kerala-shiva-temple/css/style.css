@@ -23,15 +23,18 @@ body {
 }
 
 header {
-    background: #e3900b;
+    background: linear-gradient(to right, #FF7F00, #CD853F);
     color: #fff;
     padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(255, 127, 0, 0.4);
 }
 
 header h1 {
     float: left;
     margin: 0;
     margin-top: 10px;
+    font-size: 1.8em; /* Further reduced font size as requested */
+    font-family: 'Merriweather', serif; /* Changed font style */
 }
 
 .header-logo {

@@ -1,3 +1,8 @@
+/* Puja Section Start */
+#home-puja-section {
+    display: none; /* Hide the entire Popular Puja Services section */
+}
+
 .puja-grid-home {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

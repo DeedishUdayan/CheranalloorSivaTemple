@@ -71,8 +71,8 @@
     background-color: #f8f8f8; 
     display: flex;
     flex-wrap: wrap; 
-    justify-content: space-between; 
-    align-items: stretch; 
+    justify-content: center; /* Center cards horizontally */
+    align-items: flex-start; /* Align cards to the start (top) */
     padding: 50px;
     position: relative;
     overflow: hidden;
@@ -99,7 +99,8 @@
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    flex: 0 0 calc((100% - (2 * var(--card-gap))) / 3); 
+    flex: none; /* Remove flex basis to use explicit width */
+    width: calc((100% - (2 * var(--card-gap))) / 3); /* Three cards per row with gaps */
     margin: 0; 
     min-height: 280px; 
     display: flex;
@@ -208,18 +209,24 @@
     }
 
     .service-card {
-        width: calc(50% - 30px); 
+        width: calc(50% - (var(--card-gap) / 2)); /* Two cards per row with proper gap */
+        margin-bottom: var(--card-gap); /* Add vertical gap between cards */
+    }
+
+    .services-right-column {
+        justify-content: space-around; /* Distribute space evenly for two cards */
     }
 }
 
 @media (max-width: 768px) {
     .service-card {
         width: 100%; 
-        margin: 15px 0;
+        margin-bottom: var(--card-gap); /* Use consistent gap for mobile */
     }
 
     .services-right-column {
         padding: 30px 15px;
+        justify-content: center; /* Center single card on mobile */
     }
 }
 

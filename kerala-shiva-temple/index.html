@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheranalloor Sree Mahadeva Temple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/services.css"> <!-- New stylesheet for Services section -->
     <link rel="stylesheet" href="css/administration.css"> <!-- New stylesheet for Administration section -->
@@ -15,6 +18,8 @@
     <link rel="stylesheet" href="css/video_section.css"> <!-- New stylesheet for Video section -->
     <link rel="stylesheet" href="css/footer.css"> <!-- New stylesheet for Footer section -->
     <link rel="stylesheet" href="css/mobile_nav.css"> <!-- New stylesheet for mobile navigation -->
+    <link rel="stylesheet" href="css/available_poojas.css"> <!-- New stylesheet for Available Poojas section -->
+    <link rel="stylesheet" href="css/popup.css"> <!-- New stylesheet for Popup -->
     
 </head>
 <body>
@@ -346,6 +351,126 @@
     </section>
     <!-- Puja Section End -->
 
+    <!-- Available Poojas Section Start -->
+    <section id="available-poojas-section" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="decorative-line"></div>
+                <h2 class="title">Available Poojas</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="puja-carousel-wrapper">
+                <a class="prev-puja" onclick="plusPujaSlides(-1)">&#10094;</a>
+                <a class="next-puja" onclick="plusPujaSlides(1)">&#10095;</a>
+                <div class="puja-carousel">
+                    <!-- Puja Card 1 -->
+                    <div class="puja-card-item">
+                        <div class="puja-icon-wrapper">
+                            <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                        </div>
+                        <p class="puja-name-malayalam">കളഭം</p>
+                        <p class="puja-name-english">KALABHAM</p>
+                    </div>
+
+                    <!-- Puja Card 2 -->
+                    <div class="puja-card-item">
+                        <div class="puja-icon-wrapper">
+                            <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                        </div>
+                        <p class="puja-name-malayalam">ചന്ദനം ചാർത്ത്</p>
+                        <p class="puja-name-english">CHANDAN CHARTH</p>
+                    </div>
+
+                    <!-- Puja Card 3 -->
+                    <div class="puja-card-item">
+                        <div class="puja-icon-wrapper">
+                            <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                        </div>
+                        <p class="puja-name-malayalam">പന്ത്രണ്ടു നമസ്കാരം</p>
+                        <p class="puja-name-english">PANTHRANDU NAMASKARAM</p>
+                    </div>
+
+                    <!-- Puja Card 4 -->
+                    <div class="puja-card-item">
+                        <div class="puja-icon-wrapper">
+                            <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                        </div>
+                        <p class="puja-name-malayalam">അന്നദാനം</p>
+                        <p class="puja-name-english">ANNADHANAM FIXED</p>
+                    </div>
+
+                    <!-- Puja Card 5 -->
+                    <div class="puja-card-item">
+                        <div class="puja-icon-wrapper">
+                            <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                        </div>
+                        <p class="puja-name-malayalam">മുരജപം</p>
+                        <p class="puja-name-english">MURAJPAM</p>
+                    </div>
+
+                <!-- New Puja Card 6: Ganapathy Homam -->
+                <div class="puja-card-item">
+                    <div class="puja-icon-wrapper">
+                        <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                    </div>
+                    <p class="puja-name-malayalam">ഗണപതി ഹോമം</p>
+                    <p class="puja-name-english">GANAPATHY HOMAM</p>
+                </div>
+
+                <!-- New Puja Card 7: Sudarsana Homam -->
+                <div class="puja-card-item">
+                    <div class="puja-icon-wrapper">
+                        <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                    </div>
+                    <p class="puja-name-malayalam">സുദർശന ഹോമം</p>
+                    <p class="puja-name-english">SUDARSANA HOMAM</p>
+                </div>
+
+                <!-- New Puja Card 8: Mrithyunjaya Homam -->
+                <div class="puja-card-item">
+                    <div class="puja-icon-wrapper">
+                        <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                    </div>
+                    <p class="puja-name-malayalam">മൃത്യുഞ്ജയ ഹോമം</p>
+                    <p class="puja-name-english">MRITHYUNJAYA HOMAM</p>
+                </div>
+
+                <!-- New Puja Card 9: Abhishekam -->
+                <div class="puja-card-item">
+                    <div class="puja-icon-wrapper">
+                        <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                    </div>
+                    <p class="puja-name-malayalam">അഭിഷേകം</p>
+                    <p class="puja-name-english">ABHISHEKAM</p>
+                </div>
+
+                <!-- New Puja Card 10: Archana -->
+                <div class="puja-card-item">
+                    <div class="puja-icon-wrapper">
+                        <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                    </div>
+                    <p class="puja-name-malayalam">അർച്ചന</p>
+                    <p class="puja-name-english">ARCHANA</p>
+                </div>
+
+                <!-- New Puja Card 11: Vilakku -->
+                <div class="puja-card-item">
+                    <div class="puja-icon-wrapper">
+                        <img src="images/icons/oil-lamp.png" alt="Oil Lamp Icon" class="puja-lamp-icon">
+                    </div>
+                    <p class="puja-name-malayalam">വിളക്ക്</p>
+                    <p class="puja-name-english">VILAKKU</p>
+                </div>
+            </div>
+
+                <div class="pagination-dots-puja">
+                    <!-- These dots will be dynamically generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    <!-- Available Poojas Section End -->
+
     <!-- Testimonials Section Start -->
     <section class="section section-padding" id="testimonials-section">
         <div class="container">
@@ -630,5 +755,16 @@
     <script src="js/script.js"></script>
     <script src="js/administration_slider.js"></script> <!-- New script for Administration section slider -->
     <script src="js/testimonials_slider.js"></script> <!-- New script for Testimonials section slider -->
+    <script src="js/popup.js"></script> <!-- New script for event popup -->
+    <!-- Popup HTML Start -->
+    <div id="event-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <img src="images/events/popup_event.jpg" alt="Upcoming Event" class="popup-image">
+            <p class="popup-text">Join us for our upcoming festival!</p>
+            <a href="events.html" class="popup-button">View Event Details</a>
+        </div>
+    </div>
+    <!-- Popup HTML End -->
 </body>
 </html>

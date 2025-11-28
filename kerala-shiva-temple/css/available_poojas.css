@@ -1,0 +1,299 @@
+/* Available Poojas Section */
+#available-poojas-section {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+    background-image: url('../images/background/dotted-pattern.png'); /* Light grey dotted pattern */
+    background-repeat: repeat;
+    text-align: center;
+}
+
+#available-poojas-section .section-title {
+    margin-bottom: 50px;
+}
+
+#available-poojas-section .section-title .decorative-line {
+    width: 100px;
+    height: 2px;
+    background-color: #8B4513; /* Deep brown/maroon */
+    margin: 0 auto 10px auto;
+    position: relative;
+}
+
+#available-poojas-section .section-title .decorative-line::before,
+#available-poojas-section .section-title .decorative-line::after {
+    content: '';
+    position: absolute;
+    width: 8px; /* Size of the scroll motif */
+    height: 8px;
+    background-color: #8B4513;
+    border-radius: 50%; /* Circular motif */
+    top: -3px; /* Align with the line */
+}
+
+#available-poojas-section .section-title .decorative-line::before {
+    left: -15px;
+}
+
+#available-poojas-section .section-title .decorative-line::after {
+    right: -15px;
+}
+
+#available-poojas-section .section-title .title {
+    font-size: 2em; /* Decreased font size for the label */
+    font-weight: bold;
+    color: #db4242; /* Accent red/maroon */
+    margin-top: 10px; /* Space from decorative line */
+    margin-bottom: 20px;
+}
+
+.puja-carousel-wrapper {
+    position: relative; /* Needed for positioning prev/next buttons */
+    overflow: hidden; /* Hide scrollbar but allow scrolling */
+    padding-bottom: 20px; /* Space for pagination dots */
+}
+
+.prev-puja, .next-puja {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: #db4242; /* Accent red for navigation arrows */
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    border-radius: 3px; /* Subtle rounded corners */
+    z-index: 2; /* Ensure buttons are above carousel items */
+}
+
+.prev-puja {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next-puja {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-puja:hover, .next-puja:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.puja-carousel {
+    display: flex;
+    padding: 20px 0;
+    gap: 20px; /* Space between cards */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    white-space: nowrap; /* Ensure all items stay on one line */
+    /* width: max-content; */ /* Removed as it can interfere with flex item sizing */
+}
+
+.puja-card-item {
+    flex: 0 0 auto; /* Do not grow or shrink, take auto width */
+    width: calc((100% - (var(--puja-cards-per-view) - 1) * 20px) / var(--puja-cards-per-view)); /* Dynamic width based on --puja-cards-per-view and gap */
+    background: linear-gradient(to right, #FF7F00, #CD853F); /* Changed background to linear gradient */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.puja-card-item .puja-icon-wrapper {
+    position: absolute;
+    top: -40px; /* Position above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.puja-card-item .puja-lamp-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.puja-card-item .puja-name-malayalam {
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size: 1.6em; /* Further reduced font size */
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    white-space: normal; /* Allow text to wrap */
+    word-break: break-word; /* Break long words */
+}
+
+.puja-card-item .puja-name-english {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1em; /* Further reduced font size */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.pagination-dots-puja {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot-puja {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-puja.active,
+.dot-puja:hover {
+    background-color: #db4242;
+}
+
+/* Define default for mobile (1 card per view) */
+#available-poojas-section {
+    --puja-cards-per-view: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #available-poojas-section .section-title .title {
+        font-size: 1.8em; /* Adjusted for smaller screens */
+    }
+
+    .puja-card-item {
+        width: 100%; /* Full width for single card view on mobile */
+        min-height: 280px;
+    }
+
+    .puja-card-item .puja-icon-wrapper {
+        top: -45px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .puja-card-item .puja-lamp-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .puja-card-item .puja-name-malayalam {
+        font-size: 1.8em; /* Further reduced for mobile */
+        margin-top: 70px;
+        white-space: normal; /* Allow text to wrap */
+        word-break: break-word; /* Break long words */
+    }
+
+    .puja-card-item .puja-name-english {
+        font-size: 1.3em; /* Further reduced for mobile */
+    }
+
+    .dot-puja {
+        height: 14px;
+        width: 14px;
+        margin: 0 8px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #available-poojas-section {
+        --puja-cards-per-view: 2;
+    }
+
+    .puja-carousel {
+        padding: 20px 0;
+    }
+
+    .puja-card-item {
+        width: calc((100% - (var(--puja-cards-per-view) - 1) * 20px) / var(--puja-cards-per-view)); /* Two cards per row with gap */
+        min-height: 220px;
+    }
+
+    .puja-card-item .puja-icon-wrapper {
+        top: -30px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .puja-card-item .puja-lamp-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .puja-card-item .puja-name-malayalam {
+        font-size: 1.2em; /* Further reduced for tablet */
+        margin-top: 40px;
+        white-space: normal; /* Allow text to wrap */
+        word-break: break-word; /* Break long words */
+    }
+
+    .puja-card-item .puja-name-english {
+        font-size: 0.8em; /* Further reduced for tablet */
+    }
+
+    .dot-puja {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+    }
+}
+
+@media (min-width: 1025px) {
+    #available-poojas-section {
+        --puja-cards-per-view: 5; /* Five cards per view on larger screens */
+    }
+
+    .puja-carousel {
+    }
+
+    .puja-card-item {
+        width: calc((100% - (var(--puja-cards-per-view) - 1) * 20px) / var(--puja-cards-per-view)); /* Five cards per row with gap */
+        min-height: 200px;
+    }
+
+    .puja-card-item .puja-icon-wrapper {
+        top: -25px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .puja-card-item .puja-lamp-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .puja-card-item .puja-name-malayalam {
+        font-size: 1em; /* Further reduced for desktop */
+        margin-top: 30px;
+        white-space: normal; /* Allow text to wrap */
+        word-break: break-word; /* Break long words */
+    }
+
+    .puja-card-item .puja-name-english {
+        font-size: 0.6em; /* Further reduced for desktop */
+    }
+
+    .pagination-dots-puja {
+        display: none; /* Hide dots on desktop if not needed for navigation */
+    }
+}
