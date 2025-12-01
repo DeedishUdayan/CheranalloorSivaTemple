@@ -5,42 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events - Cheranalloor Sree Mahadeva Temple</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/events_home.css"> <!-- Stylesheet for Upcoming Festivals section -->
 </head>
 <body>
     <header>
         <div class="container">
             <img src="images/logo.png" alt="Cheranalloor Sree Mahadeva Temple Logo" class="header-logo">
-            <h1>ॐ  Cheranalloor Sree Mahadeva Temple  ॐ</h1>
-            <nav>
+            <div class="header-title-wrapper">
+                <h1>ॐ  Cheranalloor Sree Mahadeva Temple  ॐ</h1>
+                <p class="header-subtitle">Redeemer Of Debts ( Rinamochaka )</p>
+            </div>
+            <nav class="main-nav-wrapper">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="pooja.html">Pooja</a></li>
                     <li><a href="donation.html">Donation</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="events">
+        <!-- Upcoming Festivals Section Start -->
+        <section class="section section-padding" id="upcoming-festivals-section">
             <div class="container">
-                <h2>Upcoming Events</h2>
-                <ul>
-                    <li>
-                        <h3>Maha Shivaratri</h3>
-                        <p>Date: March 8, 2025</p>
-                        <p>Join us for the grand celebration of Maha Shivaratri with special prayers and cultural programs.</p>
-                    </li>
-                    <li>
-                        <h3>Temple Anniversary</h3>
-                        <p>Date: April 15, 2025</p>
-                        <p>Celebrate our temple's anniversary with unique rituals and community feasts.</p>
-                    </li>
-                </ul>
+                <div class="section-title text-center">
+                    <p class="subtitle">ॐ EVENTS ॐ</p>
+                    <h2 class="title">Upcoming Festivals</h2>
+                </div>
+
+                <div class="events-grid">
+                    <!-- Event Card 1 -->
+                    <div class="event-card">
+                        <img src="images/events/Ulsavam.jpeg" alt="Event Image" class="event-image">
+                        <div class="event-info-block">
+                            <p class="event-category">ॐ Ohm Namashivaya</p>
+                            <p class="event-date"><img src="images/icons/calendar.png" alt="Calendar Icon"> Feb 27, 2026</p>
+                            <h3 class="event-name">Thiruvulsavam</h3>
+                            <p class="event-duration"><img src="images/icons/lingam.png" alt="Duration Icon"> From February 20, 2026 - February 27, 2026</p>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 2 -->
+                    <div class="event-card">
+                        <img src="images/events/MandalaChirapp.jpeg" alt="Event Image" class="event-image">
+                        <div class="event-info-block">
+                            <p class="event-category">ॐ Shambo Mahadeva</p>
+                            <p class="event-date"><img src="images/icons/calendar.png" alt="Calendar Icon"> Nov 15, 2025</p>
+                            <h3 class="event-name">Vrishikka Maholsavam</h3>
+                            <p class="event-duration"><img src="images/icons/shiva-tilak.png" alt="Duration Icon"> From Nov 15, 2025 - Dec 24, 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 3 -->
+                    <div class="event-card">
+                        <img src="images/events/Ulsavam.jpeg" alt="Event Image" class="event-image">
+                        <div class="event-info-block">
+                            <p class="event-category">ॐ Hara Har, Dev</p>
+                            <p class="event-date"><img src="images/icons/calendar.png" alt="Calendar Icon"> </p>
+                            <h3 class="event-name">Maha Shivratry</h3>
+                            <p class="event-duration"><img src="images/icons/lingam1.png" alt="Person Icon"> By Cheranalloor Shiva Temple</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- Upcoming Festivals Section End -->
     </main>
 
     <footer>

@@ -76,23 +76,17 @@
 
 .puja-image-placeholder {
     width: 100%;
-    padding-top: 52.59%; /* (284 / 540) * 100% for 540x284 aspect ratio */
+    padding-top: 30%; /* Reduced height for shorter cards */
     background-color: #e0e0e0; /* Grey placeholder color */
+    background-image: url('../images/icons/oil-lamp.png');
+    background-size: 80px 80px; /* Size of the icon */
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
-    color: #777;
     position: relative;
     overflow: hidden; /* Hide any overflowing content */
-}
-
-.puja-image-placeholder::before {
-    content: 'Image Placeholder';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .puja-info {
